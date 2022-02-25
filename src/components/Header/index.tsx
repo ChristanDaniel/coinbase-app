@@ -4,9 +4,9 @@ const Header = (): JSX.Element => {
   return (
     <>
       <header>
-        <h1>COINBASE</h1>
+        <h1>Assets</h1>
         <div>
-          
+
         </div>
       </header>
     </>

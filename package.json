@@ -11,11 +11,13 @@
   "dependencies": {
     "@sanity/cli": "^2.27.0",
     "@sanity/client": "^3.1.0",
+    "@types/styled-components": "^5.1.23",
     "init": "^0.1.2",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sanity": "^2.20.0"
+    "sanity": "^2.20.0",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@types/node": "17.0.21",

@@ -4,13 +4,24 @@ import { BiTrendingUp } from 'react-icons/bi'
 import { RiCoinsLine, RiNotification3Line } from 'react-icons/ri'
 import { AiOutlinePieChart, AiOutlinePlusCircle, AiOutlineGift } from 'react-icons/ai'
 
+import { SidebarContainer } from './styles'
 
 const Sidebar = (): JSX.Element => {
   return (
     <>
-      <aside>
+      <SidebarContainer>
         <h1>COINBASE</h1>
-      </aside>
+        <ul>
+          {asideItems.map((item) => {
+            return (
+              <li key={item.title}>
+                <span>{item.icon}</span>
+                <p>{item.title}</p>
+              </li>
+            )
+          })}
+        </ul>
+      </SidebarContainer>
     </>
   )
 }

@@ -1,3 +1,5 @@
+import Button from '../Button'
+
 import { HeaderContainer } from './styles'
 
 const Header = (): JSX.Element => {
@@ -6,9 +8,9 @@ const Header = (): JSX.Element => {
       <HeaderContainer>
         <h1>Assets</h1>
         <div>
-          <p>Wallet Connected</p>
-          <button>Buy / Sell</button>
-          <button>Send / Receive</button>
+          <p>Wallet Connected <span>0x2546b...7ECEc30</span></p>
+          <Button id='button-buy'>Buy / Sell</Button>
+          <Button id='button-receive'>Send / Receive</Button>
         </div>
       </HeaderContainer>
     </>

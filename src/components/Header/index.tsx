@@ -1,14 +1,16 @@
-// import { HeaderContainer, HeaderLiContent } from './styles'
+import { HeaderContainer } from './styles'
 
 const Header = (): JSX.Element => {
   return (
     <>
-      <header>
+      <HeaderContainer>
         <h1>Assets</h1>
         <div>
-
+          <p>Wallet Connected</p>
+          <button>Buy / Sell</button>
+          <button>Send / Receive</button>
         </div>
-      </header>
+      </HeaderContainer>
     </>
   )
 }

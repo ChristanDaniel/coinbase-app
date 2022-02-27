@@ -24,7 +24,7 @@ const HeaderContainer = styled.header`
       display: flex;
       flex-direction: column;
       border: 1px solid #8b8b8b;
-      padding: 7px;
+      padding: 4px 17px 4px 17px;
       border-radius: 35px;
       font-size: 16px;
       color: #4ee44e;

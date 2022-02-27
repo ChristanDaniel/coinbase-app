@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 const SidebarContainer = styled.aside`
   width: auto;
-  border-right: 1px solid #8b8b8b;
+  border-right: 1px solid #282b2f;
 
   h1 {
-    padding: 40px;
+    padding: 32px;
 
     font-size: 30px;
   }
@@ -14,13 +14,14 @@ const SidebarContainer = styled.aside`
     display: flex;
     flex-direction: column;
 
-    gap: 20px;
+    gap: 22px;
   }
 
   li {
     margin-left: 30px;
-    padding: 10px 40px 10px 10px;
-
+    margin-right: 30px;
+    padding: 10px 45px 10px 10px;
+    /* background-color: #141519; */
     display: flex;
     align-items: center;
 
@@ -30,7 +31,7 @@ const SidebarContainer = styled.aside`
     cursor: pointer;
 
     &:hover {
-      background: #808080;
+      background: #141519;
     }
 
     span {
@@ -40,12 +41,13 @@ const SidebarContainer = styled.aside`
       display: flex;
       align-items: center;
 
-      background-color: #808080;
+      background-color: #141519;
       border-radius: 100%;
     }
 
     p {
-      font-size: 20px;
+      font-size: 18px;
+      min-width: 120px;
     }
   }
 `

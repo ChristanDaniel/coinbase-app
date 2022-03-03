@@ -1,8 +1,33 @@
+import { useEffect, useState } from 'react'
 import Button from '../Button'
 
 import { HeaderContainer } from './styles'
 
 const Header = (): JSX.Element => {
+  const [isTest, setIsTest] = useState(false)
+  const [isTestee, setIsTestee] = useState('')
+
+  const connectWallet = async () => {
+    if ((window as any).ethereum) {
+      try {
+        const adress = await (window as any).ethereum.request({
+          method: 'eth_requestAccounts'
+        })
+
+        setIsTestee(adress)
+        setIsTest(true)
+      } catch (err) {
+        setIsTest(false)
+      }
+    } else {
+      setIsTest(false)
+    }
+  }
+
+  useEffect(() => {
+    // connectWallet()
+  }, [])
+
   return (
     <>
       <HeaderContainer>

@@ -33,9 +33,18 @@ const Header = (): JSX.Element => {
       <HeaderContainer>
         <h1>Assets</h1>
         <div>
-          <p>Wallet Connected <span>0x2546b...7ECEc30</span></p>
-          <Button id='button-buy'>Buy / Sell</Button>
-          <Button id='button-receive'>Send / Receive</Button>
+          {!isTest ? (
+            <Button id="button-connect" onClick={() => connectWallet()}>
+              Wallet Connect
+            </Button>
+          ) : (
+            <p>
+              Wallet Connected <span>{isTestee}</span>
+            </p>
+          )}
+
+          <Button id="button-buy">Buy / Sell</Button>
+          <Button id="button-receive">Send / Receive</Button>
         </div>
       </HeaderContainer>
     </>

@@ -36,10 +36,6 @@ const HeaderContainer = styled.header`
       }
     }
 
-    #button-connect {
-      background-color: rgb(0, 82, 255);
-    }
-
     #button-buy {
       background-color: rgb(0, 82, 255);
     }

@@ -1,16 +1,17 @@
 import styled from 'styled-components'
 
-const ConnectWalletContainer = styled.div`
+const HomeContaine = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
+`
+
+const ConnectWalletContainer = styled.div`
+  display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
-
-  div {
-    display: flex;
-    flex-direction: column;
-  }
+  flex-direction: column;
 
   #button-connect {
     background-color: rgb(0, 82, 255);
@@ -18,7 +19,7 @@ const ConnectWalletContainer = styled.div`
 `
 
 const HomeContent = styled.div`
-  display: flex;
+  width: 100%;
 `
 
-export { HomeContent, ConnectWalletContainer }
+export { HomeContaine, HomeContent, ConnectWalletContainer }

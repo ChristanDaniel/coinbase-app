@@ -1,8 +1,11 @@
 import { useCallback, useEffect, useState } from 'react'
-import Button from '../components/Button'
+
 import Header from '../components/Header'
+import Button from '../components/Button'
 import Sidebar from '../components/Sidebar'
-import { HomeContent, ConnectWalletContainer } from './styles'
+
+import { HomeContaine, HomeContent, ConnectWalletContainer } from './styles'
+import Portfolio from '../components/Portfolio'
 
 const HomeContainer = (): JSX.Element => {
   const [isConnectWallet, setIsConnectWallet] = useState({ isConnect: false, connectedPhrase: 'POR FAVOR CONECTADA NA SUA CARTEIRA' })
@@ -30,21 +33,24 @@ const HomeContainer = (): JSX.Element => {
 
   return (
     <>
-      {!isConnectWallet.isConnect ? (
-        <ConnectWalletContainer>
-          <div>
+      <HomeContaine>
+        {!isConnectWallet.isConnect ? (
+          <ConnectWalletContainer>
             <span>{isConnectWallet.connectedPhrase}</span>
             <Button id="button-connect" onClick={() => connectWallet()}>
               Wallet Connect
             </Button>
-          </div>
-        </ConnectWalletContainer>
-      ) : (
-        <HomeContent>
-          <Sidebar />
-          <Header numberWallet={numberWallet} />
-        </HomeContent>
-      )}
+          </ConnectWalletContainer>
+        ) : (
+          <>
+            <Sidebar />
+            <HomeContent>
+              <Header numberWallet={numberWallet} />
+              <Portfolio />
+            </HomeContent>
+          </>
+        )}
+      </HomeContaine>
     </>
   )
 }

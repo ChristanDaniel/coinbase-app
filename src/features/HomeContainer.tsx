@@ -8,10 +8,10 @@ const HomeContainer = (): JSX.Element => {
   const [isConnectWallet, setIsConnectWallet] = useState({ isConnect: false, connectedPhrase: 'POR FAVOR CONECTADA NA SUA CARTEIRA' })
   const [numberWallet, setNumberWallet] = useState('')
 
-  const connectWallet = useCallback( async() => {
+  const connectWallet = useCallback(async () => {
     if ((window as any).ethereum) {
       try {
-        const adress = await(window as any).ethereum.request({
+        const adress = await (window as any).ethereum.request({
           method: 'eth_requestAccounts'
         })
 

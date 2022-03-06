@@ -1,4 +1,5 @@
-import { PortfolioContainer, PortfolioContent } from './styles'
+import { PortfolioContainer, PortfolioContent, BalanceTitle, BalanceValue, Divider, PortfolioTable, Table, TableItem, TableRow, Title } from './styles'
+import { BsThreeDotsVertical } from 'react-icons/bs'
 
 const Portfolio = (): JSX.Element => {
   return (
@@ -18,6 +19,7 @@ const Portfolio = (): JSX.Element => {
                   <div style={{ flex: 1 }}>Price</div>
                   <div style={{ flex: 1 }}>Allocation</div>
                   <div style={{ flex: 0 }}>
+                    <BsThreeDotsVertical />
                   </div>
                 </TableRow>
               </TableItem>
